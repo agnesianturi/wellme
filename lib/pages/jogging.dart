@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:well_me/styles/styles.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:well_me/widget/bottomNavbar.dart';
@@ -73,8 +74,8 @@ class _JoggingPageState extends State<JoggingPage> {
             width: double.maxFinite,
             height: 170,
             decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/images/logo.png'),
-              fit: BoxFit.cover),
+              image: DecorationImage(image: AssetImage('assets/images/map.png'),
+              fit: BoxFit.cover)
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -111,7 +112,7 @@ class _JoggingPageState extends State<JoggingPage> {
           Container(
             padding: EdgeInsets.only(left: 20),
             width: double.maxFinite,
-            height: 100,
+            height: 120,
             decoration: BoxDecoration(
               color: AppColors.informationBox,
               borderRadius: BorderRadius.circular(12)
@@ -121,7 +122,7 @@ class _JoggingPageState extends State<JoggingPage> {
               children: [
                 Icon(
                   Icons.run_circle,
-                  size: 75,
+                  size: 90,
                   color: Colors.white,
                 ),
                 SizedBox(
@@ -130,15 +131,24 @@ class _JoggingPageState extends State<JoggingPage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(padding: EdgeInsets.only(top: 20)),
+                    Padding(padding: EdgeInsets.only(top: 12)),
                     Text(
-                      "Jogging with Freddy"
+                      "Jogging with Fredy",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight:FontWeight.bold),
                     ),
                     Text(
-                      "13.6 km"
+                      "13.6 km",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Text(
-                      "230 kcal"
+                      "230 kcal in 30 minutes",
                     ),
                   ],
                 ),
@@ -153,7 +163,7 @@ class _JoggingPageState extends State<JoggingPage> {
           Container(
             padding: EdgeInsets.only(left:20),
             width: double.maxFinite,
-            height: 100,
+            height: 120,
             decoration: BoxDecoration(
               color: AppColors.detailBox,
               borderRadius: BorderRadius.circular(12),
@@ -167,18 +177,26 @@ class _JoggingPageState extends State<JoggingPage> {
                   children: [
                     Text(
                       "You burned calories of",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                     Text(
                       "210 kcal",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Text(
                       "It's equal to one grilled chicken breast!",
                     ),
                   ],
                 ),
-                const SizedBox(
-                  width: 20,
-                ),
+                Image.asset('assets/images/chickenbreast.png', width: 100, height: 130),
               ],
             ),
           ),
