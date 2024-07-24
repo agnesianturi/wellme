@@ -80,9 +80,25 @@ class _JoggingPageState extends State<JoggingPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Be ACTIVE",
-                  style: TextStyles.body,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Be ",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Text(
+                      "ACTIVE",
+                      style: TextStyle(
+                        color: AppColors.redBox,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 5,
@@ -91,13 +107,13 @@ class _JoggingPageState extends State<JoggingPage> {
                   "Take a walk, enjoy the nature, get a healthy body"
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 10,
                 ),
                 ElevatedButton(
                   child: const Text("Start Now"),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.background,
-                    disabledIconColor: Colors.black,
+                    backgroundColor: AppColors.recordBox,
+                    foregroundColor: Colors.black,
                     elevation: 0,
                   ),
                   onPressed: (){},
@@ -110,7 +126,6 @@ class _JoggingPageState extends State<JoggingPage> {
           ),
           // CONTAINER INFORMATION
           Container(
-            padding: EdgeInsets.only(left: 20),
             width: double.maxFinite,
             height: 120,
             decoration: BoxDecoration(
@@ -120,14 +135,12 @@ class _JoggingPageState extends State<JoggingPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Icon(
-                  Icons.run_circle,
-                  size: 90,
-                  color: Colors.white,
-                ),
-                SizedBox(
-                  width: 20,
-                ),
+                // Icon(
+                //   Icons.run_circle,
+                //   size: 90,
+                //   color: Colors.white,
+                // ),
+                Image.asset('assets/images/run.png', width: 110, height: 130),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
